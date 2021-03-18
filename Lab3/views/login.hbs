@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+{{> head}}
+<body>
+<form method="post" action="{{path}}">
+    <p>Введите имя пльзователя</p>
+
+    <input type="text" name='username' placeholder="Имя пользователя"/>
+
+    <p>Введите пароль</p>
+
+    <input type="password" name="password" placeholder="Пароль"/>
+
+    <p><input type="submit" value="{{buttonName}}"></p>
+</form>
+{{> footer}}
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+{{> head}}
+<body>
+
+<form name="execute" method="get" action="{{executePath}}">
+    <p>Введите число и количество цифр после запятой</p>
+
+    <p>Число</p>
+    <input type="text" name="number" placeholder="Число">
+    <p>Количество чисел после запятой</p>
+    <input type="text" name="n" placeholder="число">
+
+    <p><input type="submit" value="Отправить"></p>
+</form>
+
+{{> footer}}
+</body>
+</html>
