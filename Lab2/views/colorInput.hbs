@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+{{> head}}
+<body>
+
+<form name="execute" method="get" action="{{executePath}}">
+    <p>Выберите тип цвета</p>
+
+    <p>RGBA</p>
+    <input type="radio" name="type" value="rgba">
+
+    <p>RGB</p>
+    <input type="radio" name="type" value="rgb">
+
+    <p><input type="submit" value="Отправить"></p>
+</form>
+
+{{> footer}}
+</body>
+</html>

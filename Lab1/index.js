@@ -4,7 +4,7 @@ const express = require("express");
 const app = express()
 
 app.listen(port, () => {
-    console.log("SERVER STARTED AT %d PORT", port);
+    console.log("СЕРВЕР ЗАПУСКАЕТСЯ НА %d ПОРТ", port);
 });
 
 function getNoRepeat(text) {
@@ -17,11 +17,11 @@ function getNoRepeat(text) {
 }
 
 app.get('/api/GachanAnton/lab1/func1',(req,res) => {
-    if(!req.query.text) res.send("Incorrect data")
+    if(!req.query.text) res.send("Неверные данные")
 
     let text= req.query.text
     let result = getNoRepeat(text)
-    if(!result) result = "No repeat"
+    if(!result) result = "Все буквы повторяются"
 
     res.send(result)
 })
@@ -48,10 +48,10 @@ app.get('/api/GachanAnton/lab1/func3',(req,res) => {
         } else if(req.query.type === "rgba") {
             res.send(getHex(true))
         } else {
-            res.send("Incorrect data")
+            res.send("Неверные данные")
         }
     } else {
-        res.send("Incorrect data")
+        res.send("Неверные данные")
     }
 })
 
@@ -59,9 +59,9 @@ function roundNum(num,n) {
     return num.toFixed(n)
 }
 
-app.get('/api/Gachan/lab1/func13',(req,res) => {
+app.get('/api/GachanAnton/lab1/func13',(req,res) => {
     if(!req.query.number || !req.query.n) {
-        res.send("Incorrect data")
+        res.send("Неверные данные")
     }
 
     let number = Number(req.query.number)
